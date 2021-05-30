@@ -1381,9 +1381,9 @@ Citizen.CreateThread(function()
 		Wait(1)
 		if IsEntityAttached(object) and DoesEntityExist(object) then
 		if GetEntityModel(object) == GetHashKey("prop_acc_guitar_01") then
+			TriggerServerEvent("M_Anticheat:Objects", object )
             DeleteObjects(object, true)
 		end
-		TriggerServerEvent("M_Anticheat:Objects", object )
 		end
 		for i=1,#ObjectsBL do
 		if GetEntityModel(object) == GetHashKey(ObjectsBL[i]) then
