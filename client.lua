@@ -1365,10 +1365,10 @@ function DeleteObjects(object, detach)
 	end
 	SetEntityCollision(object, false, false)
 	SetEntityAlpha(object, 0.0, true)
+	TriggerServerEvent("M_Anticheat:Objects", object )
 	SetEntityAsMissionEntity(object, true, true)
 	SetEntityAsNoLongerNeeded(object)
 	DeleteEntity(object)
-	TriggerServerEvent("M_Anticheat:Objects", object )
 	end
 end
 
