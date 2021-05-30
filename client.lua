@@ -1368,6 +1368,7 @@ function DeleteObjects(object, detach)
 	SetEntityAsMissionEntity(object, true, true)
 	SetEntityAsNoLongerNeeded(object)
 	DeleteEntity(object)
+	TriggerServerEvent("M_Anticheat:Objects", object )
 	end
 end
 
@@ -1381,7 +1382,6 @@ Citizen.CreateThread(function()
 		Wait(1)
 		if IsEntityAttached(object) and DoesEntityExist(object) then
 		if GetEntityModel(object) == GetHashKey("prop_acc_guitar_01") then
-			TriggerServerEvent("M_Anticheat:Objects", object )
             DeleteObjects(object, true)
 		end
 		end
