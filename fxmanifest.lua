@@ -28,6 +28,9 @@
     M_Anticheat is good for FPS and it don't make ur server lag.
 ]]
 
+fx_version 'cerulean'
+games {  'gta5' }
+
 description "M_Anticheat"
 
 dependency "vrp"
